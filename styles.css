@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap');
+
+:root {
+    --very-dark-blue-\(main-bg\): hsl(233, 47%, 7%);
+    --dark-saturated-blue-\(card-bg\): hsl(244, 38%, 16%);
+    --soft-violet-\(accent\): hsl(277, 64%, 61%);
+    --soft-violet-\(accent-transparent\): hsla(277, 92%, 24%, 0.6);
+
+    --white-\(main-heading\,stats\): hsl(0, 0%, 100%);
+    --slightly-transparent-white-\(main-paragraph\): hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white-\(stats-headings\): hsla(0, 0%, 100%, 0.6);
+
+    --font-inter:  'Inter', sans-serif;
+    --font-lexend: 'Lexend Deca', sans-serif;
+    
+    --font-regular: 400;
+    --font-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--white-\(main-heading\,stats\));
+    background-color: var(--very-dark-blue-\(main-bg\));
+    font-family: var(--font-inter);
+}
+
+.card {
+    background-color: var(--dark-saturated-blue-\(card-bg\));
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        height: 100vh;
+        place-content: center;
+    }
+
+    .card {
+        align-items: center;
+        border-radius: 10px;
+        flex-direction: row-reverse;
+        max-width: 750px;
+        text-align: left;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 1024px) { 
+    .card {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (min-width: 1440px) { 
+    .card {
+        max-width: 1000px;
+    }
+}
+
+picture, .header__image {
+    display: block; 
+    height: auto;
+    width: 100%;
+}
+
+.first {
+    position: relative;
+}
+
+.first .overlay {
+    background-color: var(--soft-violet-\(accent-transparent\));
+    inset: 0;
+    position: absolute;
+}
+
+.first, .second {
+    width: 100%;
+}
+
+
+.second {
+    padding: 40px 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .first, .second {
+        height: 100%;
+        width: 50%;
+    }
+
+    .second {
+        padding: 70px 70px 40px;
+    }
+
+    picture, .header__image {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.card__heading {
+    font-family: var(--font-lexend);
+    font-size: 1.8em;
+    font-weight: var(--font-bold);
+    line-height: 1.2em;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.card__heading .accent {
+    color: var(--soft-violet-\(accent\));
+}
+
+.card__info {
+    color: var(--slightly-transparent-white-\(main-paragraph\));
+    font-size: .9em;
+    line-height: 1.8em;
+    padding: 0 30px;
+    margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) { 
+    .card__info, .card__heading {
+        padding: 0;
+    }
+
+    .card__heading {
+        font-size: 2em; 
+    }
+
+}
+
+.progresses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.progresses .progress {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .progresses .progress {
+        width: 33.333%;
+    }
+}
+
+.progresses .progress .count {
+    font-size: 1.5em;
+    font-family: var(--font-lexend);
+    font-weight: var(--font-bold);
+    margin-bottom: 10px;
+}
+
+.progresses .progress .progress-name {
+    color: var(--slightly-transparent-white-\(stats-headings\));
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
