@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/stats-preview-card-component-using-vanilla-css-flexbox-and-grid-uT178cmnkT](https://www.frontendmentor.io/solutions/stats-preview-card-component-using-vanilla-css-flexbox-and-grid-uT178cmnkT)
+- Live Site URL: [https://fb-stats-preview-card-component.netlify.app/](https://fb-stats-preview-card-component.netlify.app/)
 
 ## My process
 
